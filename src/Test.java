@@ -1,6 +1,5 @@
 import java.time.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -224,6 +223,190 @@ public class Test {
         //D. A NumberFormatException will be thrown. int String, that's it!!!! All String ok, but 808.1 is not Integer/int
         //Integer a = Integer.valueOf("808.1");
 
+        //Q141
+        // implement an interface needs exactly use the same access modifier;
+
+        //Q147
+        //Ans: D. 0 0 0
+        /*for (int i = 0; i < 3; i++) {
+            int count = 0;
+            for (int j = 3; j < 0; j--) {
+                if (i == j) {
+                    ++count;
+                    break;
+                }
+            }
+            System.out.println(count);
+            continue;
+        }*/
+
+        //Q148
+        //Ans: C. sb.delete(int start, int end), sb.length()
+        //1. Stringbuilder only has delete with two int as parameter, and StringBuilder only has sb.length().
+        /*StringBuilder sb = new StringBuilder();
+        sb.delete(0, sb.length());*/
+
+        //Q150
+        //Ans: default.
+        // From Java SE 8, we can use static and/or default methods in interfaces, but they should be
+        //non abstract methods. SO in this case using default in blank is completely legal. Hence
+        //option C is correct.
+
+        //Q151
+        //Ans: A. 1.01 1
+        /*float f = 22.01f % 3.00f;
+        int i = 22 % 3;
+        System.out.println(f + " " + i);*/
+
+        //Q154
+        //Ans:D.
+        // while (index < 5) {if (key == myarrary[index]) {isFound = true; break;} index++;}
+        /*float myarray[] = {10.20f, 20.30f, 30.40f, 40.50f, 50.60f};
+        int index = 0;
+        boolean isFound = false;
+        float key = 30.40f;
+        while (index < 5) {
+            if (key == myarray[index]) {
+                isFound = true;
+                break;
+            }
+            index++;
+        }
+        System.out.println(index);
+        System.out.println(isFound);*/
+
+        //Q159
+        //Ans: D sc : class anotherSampleClass   asc : class anotherSampleClass
+        // it is covered, so all the same to anotherSampleClass
+        /*AnotherTest at = new AnotherTest();
+        Test t = new Test();
+        t = at;
+        System.out.println(t.getClass());
+        System.out.println(at.getClass());*/
+
+        //Q160
+        //Ans: B. ++a, b--
+        /*int a = -10;
+        int b = 17;
+        int c = ++a;
+        int d = b--;
+        c++;
+        d--;
+        System.out.println(c + " " + d);*/
+
+        //Q163
+        //Ans: C. An Exception is thrown at runtime.
+        // if array is null, then standard loop and enhanced loop will all be nullpointerexception.
+        // primitive and wrap up class same. if new keyword is used, then will be only 0000 or nothing.
+        /*int[] xx = null;
+        for (int i : xx) {
+            System.out.println(i);
+        }*/
+        /*for (int i = 0; i < xx.length; i++) {
+            System.out.println(xx[i]);
+        }*/
+
+        /*List<Integer> a = null;
+        for (Integer s : a) {
+
+            System.out.println(s);
+        }*/
+
+        //Q166
+        //Ans: C. false true;
+        /*Test t = new Test();
+        System.out.println(isAva);
+        isAva = doStuff();
+        System.out.println(isAva);*/
+
+        //Q169
+        //Ans: C. true true
+        // calculation operator higher than comparsion!!!!!
+        //System.out.println(28 + 5 <= 4 + 29);
+        //System.out.println((28 + 5) <= (4 + 29));
+
+        //Q170
+        //Ans: B. 9
+        // 1. String.trim() method, leading and tailing spaces is omitted!!!! head, end, no in between.
+        // 2. no change of the original s. just return the changed copy.
+        /*String s = " java Duke ";
+        System.out.println(s.trim().length());
+        System.out.println(s.length());*/
+
+        //Q172
+        //Ans: only I and III
+        // I: defualt constructor is empty, so ONLY!!!! contains super(); call
+        // II: ANY modifier can be used for constructor, private, public, default, protected, all ok!
+        // III: NO return tyep for constructor, otherwise if constructor called and return somthing, will be troble
+        // for creating new object.
+        // Which statement is/are true?
+        //I. Default constructor only contains "super();" call.
+        //II. We can't use any access modifier with a constructor.
+        //III. A constructor should not have a return type.
+        //A. Only I.
+        //B. Only II.
+        //C. Only I and II.
+        //D. Only I and III.
+        //E. ALL
+
+        //Q186
+        /*int[] arr = {10, 20, 30};
+        doChange(arr);
+        for (int x : arr) {
+            System.out.println(x + " , ");
+        }
+        doChange(arr);
+        System.out.println(Arrays.toString(arr));*/
+
+        //Q191
+        //Ans: Compilation Fails!!!!
+        // ANY variable created inside the for loop are LOCAL VARIABLE TO THE LOOP!!!!!!!!!!
+
+
+        //Q192
+        //Ans: A hEllO jAvA!
+        /*StringBuilder sb = new StringBuilder("hello java! ");
+        int pos = 0;
+        try {
+            for (pos = 0; pos < 12; pos++) {
+                switch (sb.charAt(pos)) {
+                    case 'a':
+                    case 'e':
+                    case 'o':
+                        String uc = Character.toString(sb.charAt(pos)).toUpperCase();
+                        sb.replace(pos, pos + 1, uc);
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println("Out of limit");
+            }
+        System.out.println(sb);*/
+
+        //Q193
+        //Which two statements are true for a two-dimensional array of primitive data type?
+        //C. At the declaration time, the number of elements of the array in each dimension must be specified.
+        //D. All methods of the class object may be invoked on the two-dimensional array.
+
+        //Q194
+        //Ans: print 1 2 3 4 5 six times!!!!!
+
+        //Q210
+        //public static void main(String[] args) ====== static public void main(String[] args)
+
+        //Q221
+        //Ans: B.NegativeArraySizeException
+
+        //Q227
+        /*int ar1[] = {2, 4, 6, 8};
+        int ar2[] = {1, 3, 5, 7, 9};
+        ar2 = ar1;
+        for (int e2 : ar2) {
+            System.out.print(" " + e2);
+        }*/
+
+        //Q228
+        //Ans: A. Call to super() must be the first line in the constructor!!!!
+
         //Q233
         //Ans: C. compilation error at line (sb.concat(xxx))
         // 1. there is no method called concat in StringBuilder, this method is in String class
@@ -233,18 +416,44 @@ public class Test {
         sb.append("-808");
         System.out.println(sb);*/
 
+        //Q234
+        StringBuilder sb = new StringBuilder(5);
+        String s = "";
+        System.out.println(sb.equals(s));
+        System.out.println(sb.toString().equals(s.toString()));
+    }
+
+
 
     }
+
+    //Q186
+    /*public static void doChange(int[] arr) {
+        for (int pos = 0; pos < arr.length; pos++) {
+            arr[pos] = arr[pos] + 1;
+        }
+    }*/
+
+    //Q166
+    /*static boolean isAva = false;
+    public static boolean doStuff() {
+        return !isAva;
+    }*/
 
     //Q114
 
 
     //Q50
-    public static void doStuff(char x) {
+    /*public static void doStuff(char x) {
         System.out.println("Good day!");
     }
 
     public static void doStuff(int y) {
         System.out.println("Good Luck!");
-    }
-}
+    }*/
+
+
+
+class AnotherTest extends Test {}
+
+
