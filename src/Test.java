@@ -17,7 +17,7 @@ public class Test {
         }*/
 
         //Q42
-        //Ans: java jeve va
+        //Ans: B java jeve va
         //extends from super class and the subclass can be used in ArrayList<>
         //1. substring(int x) means start from this index, with this one
         //2. substring(int start, int end) means form start to end, left close, right open
@@ -156,6 +156,19 @@ public class Test {
         //Q87
         //Ans: E. The program prints nothing;
         // see class Series;
+
+        //Q99
+        //Ans: B. Third Exception
+        /*try {
+            int[] arr = {100, 100};
+            dispResult(arr);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Second exception!!!");
+        } catch (Exception e) {
+            System.out.println("Third Exception!!!");
+        }*/
+
+        //Q99
 
         //Q116
         //Ans: C.squarcire...., just simply execute...
@@ -417,13 +430,20 @@ public class Test {
         System.out.println(sb);*/
 
         //Q234
-        StringBuilder sb = new StringBuilder(5);
+        /*StringBuilder sb = new StringBuilder(5);
         String s = "";
         System.out.println(sb.equals(s));
-        System.out.println(sb.toString().equals(s.toString()));
+        System.out.println(sb.toString().equals(s.toString()));*/
     }
 
-
+    /*static void dispResult(int[] num) {
+        try {
+            System.out.println(num[1] / (num[1] - num[2]));
+        } catch (ArithmeticException e) {
+            System.out.println("First Exception!!");
+        }
+        System.out.println("Done");
+    }*/
 
     }
 

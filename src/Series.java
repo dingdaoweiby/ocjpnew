@@ -1,5 +1,5 @@
 //Q87
-
+//Ans: E. The program prints nothing
 public class Series {
     private boolean flag;
 
